@@ -1,0 +1,62 @@
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon
+     ${Endereço/IP}/${path = caminho de identificação do recurso}
+        IP: https://pokeapi.co
+        path: /api/v2/pokemon
+
+Request Method: GET | POST | PUT | DELETE | PATCH
+    GET: buscar o recurso ( ela vem apos o ponto de interrogação ? )
+         exempos: 
+                https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+                    offset=20
+                    limit=20
+
+                https://pokeapi.co/api/v2/pokemon?type=grass&namei
+                    type: grass
+                    name: i ( os nomes iniciados em i)
+
+    POST: inserir um novo recurso
+    PUT: atualizar um recurso existente
+    DELETE: deletar um recurso existente
+    PATCH: alterar algumas informações em um recurso existente
+
+Headers
+    Request Headers
+        É a configuração da nossa API.
+            Autenticação
+            Accept-Language: 
+                pt-PT
+                pt;q=0.9
+                en-US;q=0.8
+                en;q=0.7
+                es;q=0.6
+
+            text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+            esta passando pro servidor o que ele aceita:
+                text/html
+                application/xhtml+xml
+                application/xml;q=0.9
+                image/avif,image/webp
+                image/apng*/*;q=0.8
+                application/signed-exchange;v=b3;q=0.7
+
+    Response Headers
+
+Body
+    É o corpo da nossa requisição, é o dado que eu quero trafegar na requisição.
+    Pra enviar os dados de um pokemon novo seria no body
+
+        Request Headers
+            content-type: application
+        
+        Request body{
+            "name": "asdfg"
+        }
+
+        STATUS CODE: 200 OK
+
+        Response Headers
+
+        Response Body
